@@ -1,0 +1,9 @@
+x=3
+y=3
+z=4
+sum1=x+y
+sum2=y+z
+sum3=z+x
+print(sum1)
+print(sum2)
+print(sum3)
