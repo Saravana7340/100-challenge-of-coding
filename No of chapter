@@ -1,0 +1,8 @@
+def calculate_total_chapter (course, unit, chapter):
+ total=course*unit*chapter
+ return total
+course=int(input ("enter the num of course:"))
+unit=int(input ("enter the num of unit:"))
+chapter=int(input ("enter the num of chapter:"))
+total=calculate_total_chapter (course, unit,chapter)
+print("total num of chapters chef has to study this sem is:",total)
