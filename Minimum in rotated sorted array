@@ -1,0 +1,7 @@
+result=nums[0]
+        temp=nums[0]
+        for i in range(len(nums)):
+            if(temp>nums[i]):
+                temp=nums[i]
+                result=nums[i]
+        return result
