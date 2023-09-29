@@ -1,19 +1,25 @@
+
 class Solution(object):
-    def largestOddNumber(self, num):
+    def singleNonDuplicate(self, nums):
         """
-        :type num: str
-        :rtype: str
+        :type nums: List[int]
+        :rtype: int
         """
-        r=""
-        index=-1
-        i=len(num)-1
-        while i>=0:
-            if num[i] in {'1','3','5','7','9'}:
-                index=i
-                break
-            i-=1
-        if index!=-1:
-            return num[:i+1]
-        else:
-            return r
+        n=len(nums)
+        low=1
+        high=n-2
+        if n==1:
+            return nums[0]
+        if nums[0]!=nums[1]:
+            return nums[0]
+        if nums[n-1]!=nums[n-2]:
+            return nums[n-1]
+        while low<=high:
+            mid=(low+high)/2
+            if (nums[mid]!=nums[mid-1] and nums[mid]!=nums[mid+1]):
+                return nums[mid]
+            elif (mid%2==0 and nums[mid]==nums[mid+1]) or (mid%2==1 and nums[mid]==nums[mid-1]):
+                low=mid+1
+            else:
+                high=mid-1
         return 0
