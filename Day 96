@@ -1,0 +1,16 @@
+class Solution(object):
+    def isIsomorphic(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        mapm = []
+        mapn = []
+        for i in s:
+            mapm.append(s.index(i))
+        for i in t:
+            mapn.append(t.index(i))
+        if mapm == mapn:
+            return True
+        return False
