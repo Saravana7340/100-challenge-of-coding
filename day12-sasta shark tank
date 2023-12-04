@@ -1,0 +1,11 @@
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
+    a=x*100//10
+    b=y*100//20 
+    if(a==b):
+        print("ANY")
+    elif(a>b):
+        print("FIRST")
+    else:
+        print("SECOND")
